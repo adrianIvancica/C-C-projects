@@ -6,7 +6,7 @@
 #define MAX_AUTHOR_LENGTH 100
 #define MAX_BOOKS 1000
 
-// Structure to store book information
+// storage
 typedef struct {
     int id;
     char title[MAX_TITLE_LENGTH];
@@ -14,7 +14,6 @@ typedef struct {
     int year;
 } Book;
 
-// Function prototypes
 void addBook();
 void viewBooks();
 void searchBooks();
