@@ -105,7 +105,7 @@ int main() {
                     case 2:  // Recall from Memory
                         printf("Memory: %.2lf\n", memory);
                         break;
-                    case 3:  // Clear Memory
+                    case 3:  // Clear
                         memory = 0;
                         printf("Memory cleared.\n");
                         break;
@@ -113,7 +113,7 @@ int main() {
                         printf("Error! Invalid choice.\n");
                 }
                 break;
-            case 4:  // Statistical Functions
+            case 4:  // statistics function
                 statisticsMenu();
                 int statChoice;
                 scanf("%d", &statChoice);
@@ -133,7 +133,7 @@ int main() {
                     printf("Error! Invalid choice.\n");
                 }
                 break;
-            case 5:  // Complex Number Operations
+            case 5:
                 complexMenu();
                 int complexChoice;
                 scanf("%d", &complexChoice);
@@ -141,19 +141,19 @@ int main() {
                 scanf("%lf %lf", &c1.real, &c1.imag);
                 printf("Enter real and imaginary parts of the second complex number: ");
                 scanf("%lf %lf", &c2.real, &c2.imag);
-                if (complexChoice == 1) { // Addition
+                if (complexChoice == 1) { // Addition logic
                     cResult.real = c1.real + c2.real;
                     cResult.imag = c1.imag + c2.imag;
                     printf("Result: %.2lf + %.2lfi\n", cResult.real, cResult.imag);
-                } else if (complexChoice == 2) { // Subtraction
+                } else if (complexChoice == 2) { // Subtraction logic
                     cResult.real = c1.real - c2.real;
                     cResult.imag = c1.imag - c2.imag;
                     printf("Result: %.2lf + %.2lfi\n", cResult.real, cResult.imag);
-                } else if (complexChoice == 3) { // Multiplication
+                } else if (complexChoice == 3) { // Multiplication logic
                     cResult.real = c1.real * c2.real - c1.imag * c2.imag;
                     cResult.imag = c1.real * c2.imag + c1.imag * c2.real;
                     printf("Result: %.2lf + %.2lfi\n", cResult.real, cResult.imag);
-                } else if (complexChoice == 4) { // Division
+                } else if (complexChoice == 4) { // Division logic
                     double denominator = c2.real * c2.real + c2.imag * c2.imag;
                     if (denominator != 0) {
                         cResult.real = (c1.real * c2.real + c1.imag * c2.imag) / denominator;
@@ -182,7 +182,6 @@ int main() {
                 for (i = 0; i < m2.rows; i++)
                     for (int j = 0; j < m2.cols; j++)
                         scanf("%lf", &m2.data[i][j]);
-                // Further matrix operations can be added here
                 break;
             case 0:  // Exit
                 printf("Exiting the calculator. Goodbye!\n");
@@ -208,7 +207,6 @@ void showMenu() {
     printf("Enter your choice: ");
 }
 
-// Display the memory function menu
 void memoryMenu() {
     printf("\nMemory Functions:\n");
     printf
