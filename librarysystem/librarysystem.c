@@ -37,9 +37,9 @@ int main() {
     while (1) {
         printf("\n--- Library Management System ---\n");
         printf("1. Add a New Book\n");
-        printf("2. View All Books\n");
-        printf("3. Search Books\n");
-        printf("4. Delete a Book\n");
+        printf("2. View All Books currently stored\n");
+        printf("3. Search Books from system\n");
+        printf("4. Delete a Book from system\n");
         printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -87,7 +87,7 @@ void addBook() {
 
     printf("Enter author name: ");
     fgets(newBook.author, MAX_AUTHOR_LENGTH, stdin);
-    newBook.author[strcspn(newBook.author, "\n")] = '\0';  // Remove newline character
+    newBook.author[strcspn(newBook.author, "\n")] = '\0'; 
 
     printf("Enter publication year: ");
     scanf("%d", &newBook.year);
@@ -120,7 +120,7 @@ void searchBooks() {
     char keyword[MAX_TITLE_LENGTH];
     int found = 0;
 
-    printf("Enter a keyword to search (title or author): ");
+    printf("Enter a keyword to search the system (title or author): ");
     getchar();  // Clear the newline character from input buffer
     fgets(keyword, MAX_TITLE_LENGTH, stdin);
     keyword[strcspn(keyword, "\n")] = '\0';  // Remove newline character
@@ -146,7 +146,7 @@ void searchBooks() {
 void deleteBook() {
     int id, found = 0;
 
-    printf("Enter the ID of the book to delete: ");
+    printf("Enter the ID of the book to delete from system: ");
     scanf("%d", &id);
 
     for (int i = 0; i < bookCount; i++) {
