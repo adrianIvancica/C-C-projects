@@ -271,7 +271,6 @@ void LOCI() {//list of commands and their info
 int main() {
 	LL* List = create_LL();
 	addFile(List);
-	titlePage();
 	LOCI();
 	
 	char input[1000];
