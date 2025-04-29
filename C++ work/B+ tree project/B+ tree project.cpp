@@ -217,7 +217,7 @@ int main() {
         cout << "3. Delete\n";
         cout << "4. Display\n";
         cout << "5. Exit\n";
-        cout << "Enter your choice: ";
+        cout << "Type a number:  ";
         cin >> choice;
 
         switch (choice) {
